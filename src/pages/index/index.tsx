@@ -4,6 +4,7 @@ import { Button, ConfigProvider, TextArea, Dialog } from '@nutui/nutui-react-tar
 import enUS from '@nutui/nutui-react-taro/dist/locales/en-US'
 import zhCN from '@nutui/nutui-react-taro/dist/locales/zh-CN'
 import './index.scss'
+
 function Index() {
   const [locale, setLocale] = useState(zhCN)
   const localeKey = locale === zhCN ? 'zhCN' : 'enUS'
@@ -37,7 +38,8 @@ function Index() {
           <Dialog
             visible={visible}
             onConfirm={() => setVisible(false)}
-            onCancel={() => setVisible(false)}>
+            onCancel={() => setVisible(false)}
+          >
             {translated[localeKey].welcome}
           </Dialog>
           <TextArea disabled showCount maxLength={20} />
