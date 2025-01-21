@@ -51,22 +51,20 @@ export default defineConfig<'webpack5'>(async (merge, { command, mode }) => {
         },
       },
       webpackChain(chain) {
-        chain.resolve.plugin('tsconfig-paths').use(TsconfigPathsPlugin);
+        chain.resolve.plugin('tsconfig-paths').use(TsconfigPathsPlugin)
         chain.merge({
-
           plugin: {
             install: {
               plugin: UnifiedWebpackPluginV5,
               args: [
                 {
                   appType: 'taro',
-                  // 下面个配置，会开启 rem -> rpx 的转化
                   rem2rpx: true,
-                  injectAdditionalCssVarScope: true, // 配置此字段为 true 即可开启注入额外的 css 变量作用域
-                },
-              ],
-            },
-          },
+                  injectAdditionalCssVarScope: true,
+                }
+              ]
+            }
+          }
         });
       },
     },

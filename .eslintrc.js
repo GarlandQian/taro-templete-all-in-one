@@ -14,6 +14,7 @@ module.exports = {
     'plugin:taro/all',
     // 启用 Prettier 和禁用与其冲突的 ESLint 规则
     'plugin:prettier/recommended',
+    'plugin:tailwindcss/recommended',
   ],
   plugins: ['react', 'taro', 'prettier', 'simple-import-sort'],
   rules: {

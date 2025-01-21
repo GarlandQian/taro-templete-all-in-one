@@ -3,7 +3,6 @@ import './index.scss';
 import { Button, ConfigProvider, Dialog, TextArea } from '@nutui/nutui-react-taro';
 import enUS from '@nutui/nutui-react-taro/dist/locales/en-US';
 import zhCN from '@nutui/nutui-react-taro/dist/locales/zh-CN';
-import { View } from '@tarojs/components';
 import { useState } from 'react';
 function Index() {
   const [locale, setLocale] = useState(zhCN);
@@ -26,9 +25,13 @@ function Index() {
   };
   return (
     <ConfigProvider locale={locale}>
-      <View className="nutui-react-demo">
-        <View>{translated[localeKey].welcome}</View>
-        <View>
+      <div className="flex flex-col">
+        <div className="text-[16px]">11</div>
+        <div className="text-[32px]">222</div>
+      </div>
+      <div className="nutui-react-demo">
+        <div>{translated[localeKey].welcome}</div>
+        <div>
           <Button type="primary" onClick={handleSwitchLocale}>
             {translated[localeKey].button}
           </Button>
@@ -43,8 +46,8 @@ function Index() {
             {translated[localeKey].welcome}
           </Dialog>
           <TextArea disabled showCount maxLength={20} />
-        </View>
-      </View>
+        </div>
+      </div>
     </ConfigProvider>
   );
 }
