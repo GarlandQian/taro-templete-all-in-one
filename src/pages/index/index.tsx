@@ -1,16 +1,16 @@
-import './index.scss';
+import './index.scss'
 
-import { Button, ConfigProvider, Dialog, TextArea } from '@nutui/nutui-react-taro';
-import enUS from '@nutui/nutui-react-taro/dist/locales/en-US';
-import zhCN from '@nutui/nutui-react-taro/dist/locales/zh-CN';
-import { useState } from 'react';
+import { Button, ConfigProvider, Dialog, TextArea } from '@nutui/nutui-react-taro'
+import enUS from '@nutui/nutui-react-taro/dist/locales/en-US'
+import zhCN from '@nutui/nutui-react-taro/dist/locales/zh-CN'
+import { useState } from 'react'
 
-import { add, asyncAdd, minus } from '@/actions/counter';
+import { add, asyncAdd, minus } from '@/actions/counter'
 
 function Index() {
-  const [locale, setLocale] = useState(zhCN);
-  const localeKey = locale === zhCN ? 'zhCN' : 'enUS';
-  const [visible, setVisible] = useState(false);
+  const [locale, setLocale] = useState(zhCN)
+  const localeKey = locale === zhCN ? 'zhCN' : 'enUS'
+  const [visible, setVisible] = useState(false)
   const [translated] = useState({
     zhCN: {
       welcome: '欢迎使用 NutUI React 开发 Taro 多端项目。',
@@ -22,11 +22,11 @@ function Index() {
       button: 'Use Chinese',
       open: 'Click Me',
     },
-  });
+  })
   const handleSwitchLocale = () => {
-    setLocale(locale === zhCN ? enUS : zhCN);
-  };
-  const env = useEnv();
+    setLocale(locale === zhCN ? enUS : zhCN)
+  }
+  const env = useEnv()
   return (
     <ConfigProvider locale={locale}>
       <div className="flex flex-col">
@@ -54,7 +54,7 @@ function Index() {
         </div>
       </div>
     </ConfigProvider>
-  );
+  )
 }
 
-export default Index;
+export default Index

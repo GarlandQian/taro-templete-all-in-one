@@ -1,0 +1,31 @@
+{
+  "extends": [
+    "taro/react",
+    "prettier",
+    "plugin:react/recommended",
+    "plugin:prettier/recommended",
+    "plugin:tailwindcss/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["react", "prettier", "@typescript-eslint", "simple-import-sort"],
+  "rules": {
+    "import/first" : "off",
+    // 将 Prettier 格式化问题标记为错误
+    "prettier/prettier": "error",
+    // 根据项目需求自定义规则
+    // Taro 不需要手动引入 React
+    "react/react-in-jsx-scope": "off",
+    "simple-import-sort/imports": "error",
+    "simple-import-sort/exports": "error",
+    "tailwindcss/no-custom-classname": "off"
+  },
+  "settings": {
+    "react": {
+      // 自动检测 React 版本
+      "version": "detect"
+    }
+  },
+  "globals": {
+    "definePageConfig": "readonly"
+  }
+}

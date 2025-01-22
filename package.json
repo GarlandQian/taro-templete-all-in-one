@@ -11,7 +11,7 @@
   },
   "scripts": {
     "postinstall": "weapp-tw patch",
-    "lint:fix": "eslint --fix . --debug",
+    "lint:fix": "eslint --ext .js,.ts,.jsx,.tsx src --fix --debug",
     "build:weapp": "taro build --type weapp",
     "build:swan": "taro build --type swan",
     "build:alipay": "taro build --type alipay",
@@ -89,7 +89,7 @@
     "eslint": "^8.57.1",
     "eslint-config-prettier": "^10.0.1",
     "eslint-config-taro": "4.0.9",
-    "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-prettier": "^5.2.3",
     "eslint-plugin-react": "^7.8.2",
     "eslint-plugin-react-hooks": "^4.2.0",
