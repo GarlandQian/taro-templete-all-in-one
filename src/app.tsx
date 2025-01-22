@@ -6,9 +6,7 @@ import type { PropsWithChildren } from 'react'
 import { useEffect } from 'react'
 import { Provider } from 'react-redux'
 
-import configStore from '@/store'
-
-const store = configStore()
+import store from '@/store'
 
 const App = (props: PropsWithChildren) => {
   // 可以使用所有的 React Hooks

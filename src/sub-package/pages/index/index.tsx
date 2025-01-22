@@ -5,6 +5,9 @@ import enUS from '@nutui/nutui-react-taro/dist/locales/en-US'
 import zhCN from '@nutui/nutui-react-taro/dist/locales/zh-CN'
 import { View } from '@tarojs/components'
 import { useState } from 'react'
+import { useSelector } from 'react-redux'
+
+import { RootState } from '@/store'
 
 function Index() {
   const [locale, setLocale] = useState(zhCN)
@@ -25,8 +28,10 @@ function Index() {
   const handleSwitchLocale = () => {
     setLocale(locale === zhCN ? enUS : zhCN)
   }
+  const count = useSelector((state: RootState) => state.counter.count) // 获取状态
   return (
     <ConfigProvider locale={locale}>
+      {count}
       <View className="nutui-react-demo">
         <View>{translated[localeKey].welcome}</View>
         <View>

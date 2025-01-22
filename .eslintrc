@@ -1,4 +1,5 @@
 {
+  "ignorePatterns": ["dist/", "node_modules/" ],
   "extends": [
     "taro/react",
     "prettier",
@@ -10,6 +11,7 @@
   "plugins": ["react", "prettier", "@typescript-eslint", "simple-import-sort"],
   "rules": {
     "import/first" : "off",
+    "import/no-commonjs": "off",
     // 将 Prettier 格式化问题标记为错误
     "prettier/prettier": "error",
     // 根据项目需求自定义规则
@@ -17,7 +19,8 @@
     "react/react-in-jsx-scope": "off",
     "simple-import-sort/imports": "error",
     "simple-import-sort/exports": "error",
-    "tailwindcss/no-custom-classname": "off"
+    "tailwindcss/no-custom-classname": "off",
+
   },
   "settings": {
     "react": {

@@ -23,4 +23,4 @@ module.exports = {
       'nutui-react-taro',
     ],
   ],
-};
+}
