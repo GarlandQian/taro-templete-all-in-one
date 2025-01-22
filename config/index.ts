@@ -1,14 +1,19 @@
 import { defineConfig, type UserConfigExport } from '@tarojs/cli';
+import path from 'path';
 import TsconfigPathsPlugin from 'tsconfig-paths-webpack-plugin';
+import { UnifiedWebpackPluginV5 } from 'weapp-tailwindcss/webpack';
+
 import devConfig from './dev';
 import prodConfig from './prod';
-import { UnifiedWebpackPluginV5 } from 'weapp-tailwindcss/webpack';
 
 // https://taro-docs.jd.com/docs/next/config#defineconfig-辅助函数
 export default defineConfig<'webpack5'>(async (merge, { command, mode }) => {
   const baseConfig: UserConfigExport<'webpack5'> = {
     projectName: 'app',
     date: '2025-1-20',
+    alias: {
+      '@': path.resolve(__dirname, '..', 'src'), // 配置 @ 别名指向 src 目录
+    },
     designWidth: 375,
     deviceRatio: {
       640: 2.34 / 2,
@@ -18,7 +23,20 @@ export default defineConfig<'webpack5'>(async (merge, { command, mode }) => {
     },
     sourceRoot: 'src',
     outputRoot: 'dist',
-    plugins: ['@tarojs/plugin-html', '@tarojs/plugin-http'],
+    plugins: [
+      '@tarojs/plugin-html',
+      '@tarojs/plugin-http',
+      '@taro-hooks/plugin-react',
+      [
+        '@taro-hooks/plugin-auto-import',
+        {
+          dts: 'types/auto-imports.d.ts',
+          eslintrc: {
+            enabled: true,
+          },
+        },
+      ],
+    ],
     defineConstants: {},
     copy: {
       patterns: [],
@@ -51,7 +69,7 @@ export default defineConfig<'webpack5'>(async (merge, { command, mode }) => {
         },
       },
       webpackChain(chain) {
-        chain.resolve.plugin('tsconfig-paths').use(TsconfigPathsPlugin)
+        chain.resolve.plugin('tsconfig-paths').use(TsconfigPathsPlugin);
         chain.merge({
           plugin: {
             install: {
@@ -61,10 +79,10 @@ export default defineConfig<'webpack5'>(async (merge, { command, mode }) => {
                   appType: 'taro',
                   rem2rpx: true,
                   injectAdditionalCssVarScope: true,
-                }
-              ]
-            }
-          }
+                },
+              ],
+            },
+          },
         });
       },
     },

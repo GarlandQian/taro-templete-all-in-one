@@ -4,10 +4,13 @@ module.exports = {
     browser: true,
     node: true,
   },
+  parser: '@typescript-eslint/parser',
   parserOptions: {
-    ecmaVersion: 2024, // 或根据需要设置为更高版本
+    ecmaVersion: 2020,
     sourceType: 'module',
+    parser: 'babel-eslint',
   },
+  globals: {},
   extends: [
     'eslint:recommended',
     'plugin:react/recommended',

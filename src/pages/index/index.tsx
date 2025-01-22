@@ -4,6 +4,9 @@ import { Button, ConfigProvider, Dialog, TextArea } from '@nutui/nutui-react-tar
 import enUS from '@nutui/nutui-react-taro/dist/locales/en-US';
 import zhCN from '@nutui/nutui-react-taro/dist/locales/zh-CN';
 import { useState } from 'react';
+
+import { add, asyncAdd, minus } from '@/actions/counter';
+
 function Index() {
   const [locale, setLocale] = useState(zhCN);
   const localeKey = locale === zhCN ? 'zhCN' : 'enUS';
@@ -23,11 +26,13 @@ function Index() {
   const handleSwitchLocale = () => {
     setLocale(locale === zhCN ? enUS : zhCN);
   };
+  const env = useEnv();
   return (
     <ConfigProvider locale={locale}>
       <div className="flex flex-col">
         <div className="text-[16px]">11</div>
-        <div className="text-[32px]">222</div>
+        <div className="text-[40px]">222</div>
+        <div className="text-[20px]">{env}</div>
       </div>
       <div className="nutui-react-demo">
         <div>{translated[localeKey].welcome}</div>
