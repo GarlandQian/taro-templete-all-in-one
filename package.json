@@ -60,12 +60,14 @@
     "@tarojs/shared": "4.0.9",
     "@tarojs/taro": "4.0.9",
     "axios": "^1.7.9",
+    "clsx": "^2.1.1",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-redux": "^9.2.0",
     "redux": "^5.0.1",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^3.1.0",
+    "tailwind-merge": "^2.6.0",
     "taro-hooks": "^2.1.0"
   },
   "devDependencies": {

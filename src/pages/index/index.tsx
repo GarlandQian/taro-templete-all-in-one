@@ -9,6 +9,7 @@ import { useDispatch, useSelector } from 'react-redux'
 
 import { RootState } from '@/store'
 import { decrement, increment } from '@/store/reducers/counter'
+import { cn } from '@/utils'
 
 function Index() {
   const [locale, setLocale] = useState(zhCN)
@@ -34,10 +35,13 @@ function Index() {
   const count = useSelector((state: RootState) => state.counter.count) // 获取状态
   const dispatch = useDispatch() // 获取 dispatch 函数
 
+  const [isActive] = useState(false)
+  const [isDisabled] = useState(true)
+
   return (
     <ConfigProvider locale={locale}>
       <div className="flex flex-col">
-        <div className="text-[16px]">111</div>
+        <div className={cn('base-class', isActive && 'active', isDisabled && 'disabled')}>111</div>
         <div className="text-[40px]">222</div>
         <div className="text-[20px]">{env}</div>
       </div>
