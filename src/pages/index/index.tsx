@@ -9,7 +9,6 @@ import { useDispatch, useSelector } from 'react-redux'
 
 import { RootState } from '@/store'
 import { decrement, increment } from '@/store/reducers/counter'
-import { cn } from '@/utils'
 
 function Index() {
   const [locale, setLocale] = useState(zhCN)
@@ -35,13 +34,10 @@ function Index() {
   const count = useSelector((state: RootState) => state.counter.count) // 获取状态
   const dispatch = useDispatch() // 获取 dispatch 函数
 
-  const [isActive] = useState(false)
-  const [isDisabled] = useState(true)
-
   return (
     <ConfigProvider locale={locale}>
       <div className="flex flex-col">
-        <div className={cn('base-class', isActive && 'active', isDisabled && 'disabled')}>111</div>
+        <div className="text-[20px]">111</div>
         <div className="text-[40px]">222</div>
         <div className="text-[20px]">{env}</div>
       </div>
@@ -50,7 +46,7 @@ function Index() {
         <Button onClick={() => dispatch(increment())}>Increment</Button>
         <Button onClick={() => dispatch(decrement())}>Decrement</Button>
       </div>
-      <Button onClick={() => Taro.navigateTo({ url: 'sub-package/pages/index/index' })}></Button>
+      <Button onClick={() => Taro.navigateTo({ url: '/sub-package/pages/index/index' })}></Button>
       <div className="nutui-react-demo">
         <div>{translated[localeKey].welcome}</div>
         <div>
