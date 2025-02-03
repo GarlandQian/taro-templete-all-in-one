@@ -95,6 +95,9 @@ importers:
       taro-hooks:
         specifier: ^2.1.0
         version: 2.1.0(qxziflco6mrdud462wdkdr3pme)
+      weixin-js-sdk:
+        specifier: ^1.6.5
+        version: 1.6.5
     devDependencies:
       '@babel/core':
         specifier: ^7.26.0
@@ -6897,6 +6900,9 @@ packages:
   websocket-extensions@0.1.4:
     resolution: {integrity: sha512-OqedPIGOfsDlo31UNwYbCFMSaO9m9G/0faIHj5/dZFDMFqPTcx6UwqyOy3COEaEOg/9VsGIpdqn62W5KhoKSpg==}
     engines: {node: '>=0.8.0'}
+
+  weixin-js-sdk@1.6.5:
+    resolution: {integrity: sha512-Gph1WAWB2YN/lMOFB/ymb+hbU/wYazzJgu6PMMktCy9cSCeW5wA6Zwt0dpahJbJ+RJEwtTv2x9iIu0U4enuVSQ==}
 
   whatwg-encoding@3.1.1:
     resolution: {integrity: sha512-6qN4hJdMwfYBtE3YBTTHhoeuUrDBPZmbQaxWAqSALV/MeEnR5z1xd8UKud2RAkFoPkmB+hli1TZSnyi84xz1vQ==}
@@ -14650,6 +14656,8 @@ snapshots:
       websocket-extensions: 0.1.4
 
   websocket-extensions@0.1.4: {}
+
+  weixin-js-sdk@1.6.5: {}
 
   whatwg-encoding@3.1.1:
     dependencies:
