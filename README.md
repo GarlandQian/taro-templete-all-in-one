@@ -5,7 +5,7 @@
 # Taro 模板项目
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![GitHub stars](https://img.shields.io/github/stars/yourusername/yourrepo.svg)](https://github.com/GarlandQian//taro-templete-all-in-one/stargazers)
+[![GitHub stars](https://img.shields.io/github/stars/GarlandQian/yourrepo.svg)](https://github.com/GarlandQian/taro-templete-all-in-one/stargazers)
 
 ## 项目简介
 
@@ -68,7 +68,7 @@
 
 - **ESLint & Prettier**：请确保你的编辑器安装了相应插件，保存时会自动格式化代码，确保代码风格一致。
 - **Axios**：在 `src/utils/request.ts` 中配置全局请求拦截器和错误处理，方便进行二次封装。
-- **Redux & Taro Hooks**：结合 Taro Hooks 使用 Redux，使状态管理更简洁。具体实现请参见 `src/redux` 目录。
+- **Redux & Taro Hooks**：结合 Taro Hooks 使用 Redux，使状态管理更简洁。具体实现请参见 `src/store` 目录。
 - **TailwindCSS**：按照 TailwindCSS 文档，在组件中直接使用类名快速构建 UI。
 
 ## 推广与贡献
