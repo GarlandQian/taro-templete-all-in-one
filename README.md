@@ -87,7 +87,3 @@
 ## License
 
 本项目基于 [MIT License](LICENSE) 开源协议，欢迎大家使用和贡献代码。
-
----
-
-这样保存后，你就拥有了一个标准的 Markdown 格式的 README 文件，可以直接在 GitHub 上使用。
