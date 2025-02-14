@@ -5,7 +5,7 @@
 # Taro 模板项目
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![GitHub stars](https://img.shields.io/github/stars/yourusername/yourrepo.svg)](https://github.com/yourusername/yourrepo/stargazers)
+[![GitHub stars](https://img.shields.io/github/stars/yourusername/yourrepo.svg)](https://github.com/GarlandQian//taro-templete-all-in-one/stargazers)
 
 ## 项目简介
 
