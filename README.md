@@ -32,7 +32,7 @@
 
 ### 1. 克隆仓库
 
-    git clone https://github.com/yourusername/yourrepo.git
+    git clone https://github.com/GarlandQian/taro-templete-all-in-one.git
     cd yourrepo
 
 ### 2. 安装依赖
